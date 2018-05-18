@@ -100,9 +100,9 @@ int main(int argc, char **argv){
         }
         else if(sscanf(line, "splice %d", &val) == 1){
             /**
-             * splice two lists
+             * splice a list into a list
              */
-            list_splice(make_another_list(val), &foo_list);
+            list_splice(make_another_list(val), foo_list.prev);
         }
         foo_dump(&foo_list);
     }
